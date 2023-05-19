@@ -3,3 +3,5 @@
 .Ruserdata
 .DS_Store
 .Rbuildignore
+.Rproj.user
+save_WID_SMK-dat.R
