@@ -6,7 +6,8 @@
 #' @return Data frame with WID smk scores as columns and samples as rows
 #' @export
 
-WID_SMK <- function(beta){
+WID_SMK <- function(beta,
+                    return.basename = F){
 
   # initiate tmp
   tmp <- data.frame(basename = colnames(beta))
@@ -39,7 +40,10 @@ WID_SMK <- function(beta){
     tmp[[paste0("WID_SMK450_", setnames[i])]] <- colMeans(beta[intersect,])
   }
 
-  tmp <- tmp[,-1] # remove basename column
+  if(return.basename == F){
+    tmp <- tmp[,-1] # remove basename column
+  }
+
   return(tmp)
 
 }
