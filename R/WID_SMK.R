@@ -3,6 +3,7 @@
 #' Key function to compute mean WID smoke scores
 #'
 #' @param beta Preprocessed data matrix
+#' @param return.basename Parameter to set whether basename should be return with output dataframe. FALSE by default.
 #' @return Data frame with WID smk scores as columns and samples as rows
 #' @export
 
