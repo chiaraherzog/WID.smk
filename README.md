@@ -11,7 +11,7 @@
 
 Installation can be achieved using devtools::install_github.
 
-```
+```{r}
 if(!require(devtools)){
 	install.packages("devtools")
 }
@@ -23,7 +23,7 @@ devtools::install_github("chiaraherzog/WID.smk")
 
 Smoking indices are calculated using the `WID.smk::WID_SMK()` function on a beta matrix:
 
-```
+```{r}
 library(WID.smk)
 
 out <- WID_SMK(beta)
@@ -36,15 +36,15 @@ To correct for immune cell composition in buccal, saliva or cervical samples (ot
 
 Correction can be done externally, e.g. using existing datasets, or internally (recommended for new smoking histories), which extract slopes and intercepts from the data at hand.
 
-```
+```{r}
 pheno <- pheno |>
 	correct_ic(correction = 'internal')
 ```
 
 Some groups of CpGs exhibit a loss of methylation (hypomethylation) with smoking while others exhibit a gain (hypermethylation), which may seem confusing. To improve interpretability, indices can be scaled so smokers always exhibit higher values, and values are z-scaled:
 
-```
-pheno <- pheno ||>
+```{r}
+pheno <- pheno |>
 	scale()
 ```
 
