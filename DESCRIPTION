@@ -1,7 +1,7 @@
 Package: WID.smk
 Type: Package
 Title: Calculates WID SMK indices (450 and EPIC version)
-Version: 0.1.0
+Version: 0.2.0
 Author: Chiara Herzog
 Maintainer: Chiara Herzog <chiara.herzog@uibk.ac.at>
 Description: Computes smoking indices and can correct for immune cell composition in buccal samples.
